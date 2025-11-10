@@ -1,5 +1,5 @@
 class DoubleNode:
-    def __init__(self, prev=None, next=None, data=None):
+    def __init__(self, data=None, prev=None, next=None):
         self.__data = data
         self.__next = next
         self.__prev = prev
