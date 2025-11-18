@@ -41,8 +41,14 @@ class DoubleList:
     def isEmpty(self):
         return self.size == 0
     
+    def show(self):
+        current = self.first
+        while current:
+            print(current.data)
+            current = current.next
+
     def addFirst(self, e):
-        n = DoubleNode(e) #Nuevo nodo con el dato e
+        n = DoubleNode(data=e) #Nuevo nodo con el dato e
         if self.isEmpty(): #Si la lista esta vacia, el nuevo nodo es la cabecera y la cola
             self.first = n
             self.last = n
@@ -53,7 +59,7 @@ class DoubleList:
         self.size += 1
 
     def addLast(self, e):
-        n = DoubleNode(e)
+        n = DoubleNode(data=e)
         if self.isEmpty():
             self.first = n
             self.last = n
@@ -121,7 +127,7 @@ class DoubleList:
         if n==self.last:
             self.addLast(e)
         else:
-            m = DoubleNode(e)
+            m = DoubleNode(data=e)
             temp = n.next
 
             n.next = m
@@ -134,7 +140,7 @@ class DoubleList:
         if n == self.first:
             self.addFirst(e)
         else:
-            m = DoubleNode(e)
+            m = DoubleNode(data=e)
             temp = n.prev
             temp.next = m
             m.prev = temp

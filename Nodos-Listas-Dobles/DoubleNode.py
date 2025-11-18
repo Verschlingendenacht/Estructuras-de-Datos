@@ -1,5 +1,5 @@
 class DoubleNode:
-    def __init__(self, data=None, prev=None, next=None):
+    def __init__(self, data=None, next=None, prev=None ):
         self.__data = data
         self.__next = next
         self.__prev = prev
@@ -27,4 +27,7 @@ class DoubleNode:
     @prev.setter
     def prev(self, p):
         self.__prev = p
+
+    def __str__(self):
+        return str(self.data)
 
